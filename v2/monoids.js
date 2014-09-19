@@ -1,6 +1,4 @@
-if(typeof PointFree == undefined) { PointFree = {} }
-
-PointFree.Monoids = (function() {
+define([], function() {
 
 	var getResult = function(x) { return x.val; };
 
@@ -88,4 +86,4 @@ PointFree.Monoids = (function() {
 
 
 	return {Max: Max, Min: Min, Sum: Sum, Product: Product, Any: Any, All: All, getResult: getResult}
-})();
+});

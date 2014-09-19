@@ -1,6 +1,4 @@
-if(typeof PointFree == undefined) { PointFree = {} }
-  
-PointFree.Maybe = (function() {
+define([], function() {
 
   var MaybeType = function(x){ this.val = x; }
     , Just = function(x){ this.val = x; } 
@@ -77,4 +75,4 @@ PointFree.Maybe = (function() {
   Nothing.prototype.toString = function() { return this.inspect(); }
 
   return Maybe;
-})();
+});
