@@ -56,6 +56,12 @@ function (_, $, L, pf, Future, b, io) {
 	window.assertEqual = function(x,y){
 	  if(inspectIt(x) !== inspectIt(y)) throw("expected "+inspectIt(x)+" to equal "+inspectIt(y));
 	}
+	
+	window.assertEqual_ = function(cnsl){
+		return function(x,y){
+	  		if(inspectIt(x) !== inspectIt(y)) cnsl.log("FAIL: expected "+inspectIt(x)+" to equal "+inspectIt(y));
+		}
+	}
 
   var _empty = function() { return {}; };
 
